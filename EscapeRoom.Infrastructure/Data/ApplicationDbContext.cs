@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using EscapeRoom.Infrastructure.Data.Configurations;
 using EscapeRoom.Infrastructure.Data.Models;
 
 namespace EscapeRoom.Infrastructure.Data
@@ -21,7 +22,9 @@ namespace EscapeRoom.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
         }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }

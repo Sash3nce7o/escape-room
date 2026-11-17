@@ -3,9 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Низът за връзка идва от appsettings, паролата — от User Secrets (никога не се записва в Git).
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var dbPassword = builder.Configuration["DbPassword"];
+
+if (!string.IsNullOrEmpty(dbPassword))
+{
+    connectionString += $"Password={dbPassword};";
+}
+
 // Регистрация на DbContext — точката, където Infrastructure се свързва към приложението.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddOpenApi();
 

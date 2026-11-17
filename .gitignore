@@ -45,3 +45,5 @@ appsettings.secrets.json
 # Test results
 TestResults/
 coverage/
+documentation.md
+documentation.md
