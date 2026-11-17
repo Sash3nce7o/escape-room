@@ -45,5 +45,8 @@ appsettings.secrets.json
 # Test results
 TestResults/
 coverage/
+
+# Local documents (diploma documentation — kept outside the repository)
+documentation.md
 documentation.md
 documentation.md
