@@ -19,5 +19,7 @@ namespace EscapeRoom.Infrastructure.Data.Models
 
         [MaxLength(MaxDescriptionLength)]
         public string? Description { get; set; }
+
+        public virtual ICollection<Game> Games { get; set; } = new List<Game>();
     }
 }

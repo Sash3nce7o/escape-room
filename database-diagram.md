@@ -1,8 +1,5 @@
 # Database Schema — Escape Room Platform
 
-> Rendered with Obsidian's built-in Mermaid support (switch to **Reading view** / open the diagram).
->
-> Status: **User** and **Category** are implemented in the database. The remaining entities are the target schema and will be added model-by-model.
 
 ## Entity Relationship Diagram
 

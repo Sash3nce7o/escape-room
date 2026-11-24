@@ -23,8 +23,12 @@ namespace EscapeRoom.Infrastructure.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new GameConfiguration());
+            modelBuilder.ApplyConfiguration(new PuzzleConfiguration());
         }
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Puzzle> Puzzles { get; set; }
     }
 }

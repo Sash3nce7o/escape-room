@@ -9,5 +9,18 @@ namespace EscapeRoom.Infrastructure.Data.Constants
         {
             public const int NameMaxLength = 60;
         }
+
+        public static class GameConstants
+        {
+            public const int TitleMaxLength = 200;
+            public const int CoverUrlMaxLength = 1000;
+        }
+
+        public static class PuzzleConstants
+        {
+            public const int TitleMaxLength = 200;
+            public const int QuestionMaxLength = 2000;
+            public const int AnswerHashMaxLength = 512;
+        }
     }
 }
